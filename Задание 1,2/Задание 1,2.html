@@ -1,4 +1,5 @@
-<HTML><HEAD><TITLE>Задание 1</TITLE>
+<HTML><HEAD>
+	<TITLE>1,2 ЗАДАНИЕ</TITLE>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<style> h2 {background-color:yellow} div {background-color:yellow} p {color:red}</style>
 	</HEAD>
@@ -6,8 +7,64 @@
 		<style>
   body { background: url(3.png); }
 </style>
-		<div>ROK</div>
+		<h1>ROK</h1>
 		<p><img src="4.png" alt="Письма мастера дзен"></p>
+		<h1>Пять событий с мышкой</h1>
+	<p id="QQ" style="font-size:17px;" onclick="font()">Щёлкните по мне мышкой</p>
+	<p id="WW" style="background-color:yellow;" onmousedown="font1()" onmouseup="font2()">На этом тексте нажмите, подержите и отпустите левую кнопку мышки</p>
+	<p id="EE" style="background-color:cyan;" onmouseover="font3()" onmouseout="font4()">Медленно проведите курсором мышки по этой надписи</p>
+
+<SCRIPT>
+	flag=0;
+	siz=0;
+	function font()
+
+	{z1=document.getElementById('QQ')
+
+	if(flag==0)
+	{document.getElementById('QQ').style.color='white';
+	flag=1;}
+	else
+	{document.getElementById('QQ').style.color='black';
+	flag=0;}
+
+	z=z1.style.backgroundColor
+	if(z!="cyan")z="cyan"
+	else z="white"
+	z1.style.backgroundColor=z;
+
+	if(siz==0)
+	{document.getElementById('QQ').style.fontSize='48px';
+	siz=1;}
+	else
+	{document.getElementById('QQ').style.fontSize='17px';
+	siz=0;}
+	}
+</SCRIPT>
+
+<SCRIPT>
+	function font1()
+	{
+	document.getElementById('WW').style.backgroundColor='green';
+	}
+
+	function font2()
+	{
+	document.getElementById('WW').style.backgroundColor='yellow';
+	}
+</SCRIPT>
+
+<SCRIPT>
+	function font3()
+	{
+	document.getElementById('EE').style.backgroundColor='red';
+	}
+
+	function font4()
+	{
+	document.getElementById('EE').style.backgroundColor='cyan';
+	}
+</SCRIPT>
 
 		<script src="https://www.google.com/jsapi"></script>
   <script>
@@ -33,11 +90,11 @@
  </head>
  <body>
   <div id="air" style="width: 500px; height: 400px;"></div>
-	<H2 ID="HH">Первая строка</H2>
-	<p ID="HO">Вторая строка</p>
-	<div ID="HI">Третья строка</div>
+	<H2 ID="HH">Азот</H2>
+	<p ID="HO">Кислород</p>
+	<div ID="HI">Аргон</div>
 
-	<SCRIPT>
+	<script>
 	flag=0;
 	flag2=0;
 	flag3=0
@@ -97,6 +154,6 @@
 	}
 	}
 
-	</SCRIPT>
+	</script>
 	</BODY>
 	</HTML>
