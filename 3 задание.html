@@ -1,0 +1,46 @@
+<HTML><HEAD>
+
+<TITLE>ПУдж/Падж</TITLE>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	</HEAD>
+	<BODY bgcolor="#fa8e47" text="#fff"> 
+
+	<div  align="center" id="all" onclick="fontall(event)">
+		<IMG SRC="1.png" width="640px" height="720px" id="1">
+		<p id="txt" style="font-size:30px;" onclick="font()">Пудж</p>
+	</div>
+
+	<SCRIPT>
+	flag=0;
+	function font()
+
+	{
+	if(flag==0)
+	{document.getElementById('txt').style.color='yellow';
+	flag=1;}
+	else
+	{document.getElementById('txt').style.color='red';
+	flag=0;}
+	}
+	</SCRIPT>
+	</BODY>
+
+	<SCRIPT>
+	flag1=0
+	function fontall(event)
+
+	{id = event.target.id;
+	if (id == "1")
+	{
+		if(flag1==0)
+			{event.target.src = "2.png";
+            document.getElementById('txt').textContent = "Пудж";
+			flag1=1;}
+		else
+			{event.target.src = "1.png";
+            document.getElementById('txt').textContent = "Падж";
+			flag1=0;}
+	}
+	}
+	</SCRIPT>
+</HTML>
