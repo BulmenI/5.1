@@ -1,0 +1,102 @@
+<HTML><HEAD><TITLE>Задание 1</TITLE>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<style> h2 {background-color:yellow} div {background-color:yellow} p {color:red}</style>
+	</HEAD>
+	<BODY ID="B" onclick="rodEl(event)">
+		<style>
+  body { background: url(3.png); }
+</style>
+		<div>ROK</div>
+		<p><img src="4.png" alt="Письма мастера дзен"></p>
+
+		<script src="https://www.google.com/jsapi"></script>
+  <script>
+   google.load("visualization", "1", {packages:["corechart"]});
+   google.setOnLoadCallback(drawChart);
+   function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+     ['Газ', 'Объём'],
+     ['Азот',     78.09],
+     ['Кислород', 20.95],
+     ['Аргон',    0.93],
+     ['Углекислый газ', 0.03]
+    ]);
+    var options = {
+     title: 'Состав воздуха',
+     is3D: true,
+     pieResidueSliceLabel: 'Остальное'
+    };
+    var chart = new google.visualization.PieChart(document.getElementById('air'));
+     chart.draw(data, options);
+   }
+  </script>
+ </head>
+ <body>
+  <div id="air" style="width: 500px; height: 400px;"></div>
+	<H2 ID="HH">Первая строка</H2>
+	<p ID="HO">Вторая строка</p>
+	<div ID="HI">Третья строка</div>
+
+	<SCRIPT>
+	flag=0;
+	flag2=0;
+	flag3=0
+	function rodEl(evt)
+
+	{ var e = evt || window.event;
+	var elem = e.target || e.srcElement;
+	id1=elem.id
+	z1=document.getElementById(id1)
+	switch(id1)
+
+	{
+	case "HH":
+	if(flag==0)
+	{ document.getElementById(id1).style.color='rgb(255,255,255)';
+	flag=1;
+	}
+	else
+	{ document.getElementById(id1).style.color='rgb(0,0,0)';
+	flag=0;
+	}
+	z=z1.style.backgroundColor
+	if(z!="blue")z="blue"
+	else z="yellow"
+	z1.style.backgroundColor=z
+	break
+
+	case "HI":
+	if(flag2==0)
+	{ document.getElementById(id1).style.color='rgb(255,255,255)';
+	flag2=1;
+	}
+	else
+	{ document.getElementById(id1).style.color='rgb(0,0,0)';
+	flag2=0;
+	}
+	z=z1.style.backgroundColor
+	if(z!="blue")z="blue"
+	else z="yellow"
+	z1.style.backgroundColor=z
+	break
+
+	case "HO":
+	if(flag3==0)
+	{ document.all.HO.style.color='white';
+	flag3=1;
+	}
+	else
+	{ document.all.HO.style.color='red';
+	flag3=0;
+	}
+	z=z1.style.backgroundColor
+	if(z!="green")z="green"
+	else z="white"
+	z1.style.backgroundColor=z
+	break
+	}
+	}
+
+	</SCRIPT>
+	</BODY>
+	</HTML>
